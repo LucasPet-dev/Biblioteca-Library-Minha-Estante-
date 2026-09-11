@@ -1,5 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using MinhaEstante.Presentation.Resources;
 using MinhaEstante.Presentation.Services;
 
 namespace MinhaEstante.Presentation.Views.Dialogs;
@@ -14,7 +15,7 @@ public partial class ConfirmRemoveDialog : Window
     public ConfirmRemoveDialog(string bookTitle)
         : this()
     {
-        QuestionText.Text = $"Remover \"{bookTitle}\" da biblioteca?";
+        QuestionText.Text = string.Format(Strings.RemoveBookQuestion, bookTitle);
     }
 
     private void OnConfirm(object? sender, RoutedEventArgs e)

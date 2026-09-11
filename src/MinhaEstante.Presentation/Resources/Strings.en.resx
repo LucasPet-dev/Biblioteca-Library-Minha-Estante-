@@ -49,4 +49,200 @@
   <data name="SectionAbout" xml:space="preserve">
     <value>About</value>
   </data>
+
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="Genre" xml:space="preserve">
+    <value>Genre</value>
+  </data>
+
+  <data name="ReaderSection" xml:space="preserve">
+    <value>Reader</value>
+  </data>
+  <data name="ReaderSectionSubtitle" xml:space="preserve">
+    <value>Display preferences when opening a book.</value>
+  </data>
+  <data name="DefaultZoom" xml:space="preserve">
+    <value>Default zoom</value>
+  </data>
+  <data name="FitMode" xml:space="preserve">
+    <value>Display mode</value>
+  </data>
+  <data name="AppearanceSection" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="AppearanceSectionSubtitle" xml:space="preserve">
+    <value>Theme and cover size.</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="CoverSize" xml:space="preserve">
+    <value>Cover size</value>
+  </data>
+  <data name="LibrarySortSubtitle" xml:space="preserve">
+    <value>Ordering of library items.</value>
+  </data>
+  <data name="SortOrder" xml:space="preserve">
+    <value>Default ordering</value>
+  </data>
+  <data name="StorageSection" xml:space="preserve">
+    <value>Data / Storage</value>
+  </data>
+  <data name="StorageSectionSubtitle" xml:space="preserve">
+    <value>File location and cache cleanup.</value>
+  </data>
+  <data name="LibraryFolder" xml:space="preserve">
+    <value>Library folder</value>
+  </data>
+  <data name="BrowseFolder" xml:space="preserve">
+    <value>Choose new folder...</value>
+  </data>
+  <data name="ChooseLibraryFolder" xml:space="preserve">
+    <value>Choose new library folder</value>
+  </data>
+  <data name="MoveDataHint" xml:space="preserve">
+    <value>Data will be copied to the new folder and applied after restarting the app.</value>
+  </data>
+  <data name="Cache" xml:space="preserve">
+    <value>Cache</value>
+  </data>
+  <data name="ClearPageCache" xml:space="preserve">
+    <value>Clear page cache</value>
+  </data>
+  <data name="GeneralSection" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="GeneralSectionSubtitle" xml:space="preserve">
+    <value>Language and saving behavior.</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="SaveProgress" xml:space="preserve">
+    <value>Save progress</value>
+  </data>
+
+  <data name="FitToPage" xml:space="preserve">
+    <value>Fit to page</value>
+  </data>
+  <data name="FitToWidth" xml:space="preserve">
+    <value>Fit to width</value>
+  </data>
+  <data name="FullHeight" xml:space="preserve">
+    <value>Full height</value>
+  </data>
+  <data name="CoverSmall" xml:space="preserve">
+    <value>Small</value>
+  </data>
+  <data name="CoverMedium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="CoverLarge" xml:space="preserve">
+    <value>Large</value>
+  </data>
+  <data name="SortByTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="SortByAuthor" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="SortByDateAdded" xml:space="preserve">
+    <value>Date added</value>
+  </data>
+  <data name="SortByLastAccessed" xml:space="preserve">
+    <value>Last accessed</value>
+  </data>
+  <data name="EveryChange" xml:space="preserve">
+    <value>On every change</value>
+  </data>
+  <data name="Every5Seconds" xml:space="preserve">
+    <value>5 seconds</value>
+  </data>
+  <data name="Every10Seconds" xml:space="preserve">
+    <value>10 seconds</value>
+  </data>
+  <data name="Every30Seconds" xml:space="preserve">
+    <value>30 seconds</value>
+  </data>
+
+  <data name="LanguageAppliedOnRestart" xml:space="preserve">
+    <value>The language will be applied when the app restarts.</value>
+  </data>
+  <data name="DataMovedRestart" xml:space="preserve">
+    <value>Data copied. Restart the app to use the new folder.</value>
+  </data>
+  <data name="ErrorMoving" xml:space="preserve">
+    <value>Error moving: {0}</value>
+  </data>
+  <data name="CacheCleared" xml:space="preserve">
+    <value>Page cache cleared.</value>
+  </data>
+
+  <data name="SelectPdfOrCbz" xml:space="preserve">
+    <value>Select a PDF or CBZ file.</value>
+  </data>
+  <data name="Importing" xml:space="preserve">
+    <value>Importing...</value>
+  </data>
+  <data name="ImportedSuccessfully" xml:space="preserve">
+    <value>'{0}' imported successfully.</value>
+  </data>
+  <data name="ImportError" xml:space="preserve">
+    <value>Error importing: {0}</value>
+  </data>
+  <data name="ImportSubtitle" xml:space="preserve">
+    <value>Select a PDF or CBZ file to add to your shelf.</value>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Select file...</value>
+  </data>
+  <data name="NoFileSelected" xml:space="preserve">
+    <value>No file selected</value>
+  </data>
+  <data name="SelectBook" xml:space="preserve">
+    <value>Select book</value>
+  </data>
+  <data name="DigitalBooks" xml:space="preserve">
+    <value>Digital books</value>
+  </data>
+
+  <data name="EditInfo" xml:space="preserve">
+    <value>Edit details</value>
+  </data>
+  <data name="AboutDescription" xml:space="preserve">
+    <value>Digital library reader and organizer (PDF and CBZ).</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+
+  <data name="RemoveBookTitle" xml:space="preserve">
+    <value>Remove book</value>
+  </data>
+  <data name="RemoveBookQuestion" xml:space="preserve">
+    <value>Remove "{0}" from the library?</value>
+  </data>
+  <data name="DeleteFileAlso" xml:space="preserve">
+    <value>Also delete the file from disk</value>
+  </data>
 </root>

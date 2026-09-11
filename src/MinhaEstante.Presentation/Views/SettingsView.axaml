@@ -1,6 +1,7 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:MinhaEstante.Presentation.ViewModels"
+             xmlns:res="using:MinhaEstante.Presentation.Resources"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="960" d:DesignHeight="640"
@@ -12,8 +13,8 @@
 
             <!-- Leitor -->
             <StackPanel Spacing="4">
-                <TextBlock Text="Leitor" FontSize="20" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" />
-                <TextBlock Text="Preferências de exibição ao abrir um livro." FontSize="12" Foreground="{DynamicResource TextMutedBrush}" />
+                <TextBlock Text="{x:Static res:Strings.ReaderSection}" FontSize="20" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" />
+                <TextBlock Text="{x:Static res:Strings.ReaderSectionSubtitle}" FontSize="12" Foreground="{DynamicResource TextMutedBrush}" />
             </StackPanel>
 
             <Border Classes="settingscard">
@@ -21,7 +22,7 @@
 
                     <StackPanel Spacing="8">
                         <Grid ColumnDefinitions="*,Auto">
-                            <TextBlock Text="Zoom padrão" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" VerticalAlignment="Center" />
+                            <TextBlock Text="{x:Static res:Strings.DefaultZoom}" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" VerticalAlignment="Center" />
                             <TextBlock Grid.Column="1" FontSize="13" Foreground="{DynamicResource TextMutedBrush}"
                                        Text="{Binding DefaultZoom, StringFormat='{}{0:0.00}x'}" />
                         </Grid>
@@ -30,7 +31,7 @@
                     </StackPanel>
 
                     <StackPanel Spacing="8">
-                        <TextBlock Text="Modo de exibição" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
+                        <TextBlock Text="{x:Static res:Strings.FitMode}" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
                         <ComboBox ItemsSource="{Binding FitModeOptions}"
                                   SelectedIndex="{Binding FitModeIndex}"
                                   HorizontalAlignment="Stretch" />
@@ -41,22 +42,22 @@
 
             <!-- Aparência -->
             <StackPanel Spacing="4">
-                <TextBlock Text="Aparência" FontSize="20" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" />
-                <TextBlock Text="Tema e tamanho das capas." FontSize="12" Foreground="{DynamicResource TextMutedBrush}" />
+                <TextBlock Text="{x:Static res:Strings.AppearanceSection}" FontSize="20" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" />
+                <TextBlock Text="{x:Static res:Strings.AppearanceSectionSubtitle}" FontSize="12" Foreground="{DynamicResource TextMutedBrush}" />
             </StackPanel>
 
             <Border Classes="settingscard">
                 <StackPanel Spacing="18">
 
                     <StackPanel Spacing="8">
-                        <TextBlock Text="Tema" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
+                        <TextBlock Text="{x:Static res:Strings.Theme}" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
                         <ToggleSwitch IsChecked="{Binding IsDarkTheme}"
-                                      OnContent="Escuro" OffContent="Claro"
+                                      OnContent="{x:Static res:Strings.ThemeDark}" OffContent="{x:Static res:Strings.ThemeLight}"
                                       HorizontalAlignment="Left" />
                     </StackPanel>
 
                     <StackPanel Spacing="8">
-                        <TextBlock Text="Tamanho das capas" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
+                        <TextBlock Text="{x:Static res:Strings.CoverSize}" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
                         <ComboBox ItemsSource="{Binding CoverSizeOptions}"
                                   SelectedIndex="{Binding CoverSizeIndex}"
                                   HorizontalAlignment="Stretch" />
@@ -67,15 +68,15 @@
 
             <!-- Biblioteca -->
             <StackPanel Spacing="4">
-                <TextBlock Text="Biblioteca" FontSize="20" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" />
-                <TextBlock Text="Ordenação dos itens da biblioteca." FontSize="12" Foreground="{DynamicResource TextMutedBrush}" />
+                <TextBlock Text="{x:Static res:Strings.SectionLibrary}" FontSize="20" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" />
+                <TextBlock Text="{x:Static res:Strings.LibrarySortSubtitle}" FontSize="12" Foreground="{DynamicResource TextMutedBrush}" />
             </StackPanel>
 
             <Border Classes="settingscard">
                 <StackPanel Spacing="18">
 
                     <StackPanel Spacing="8">
-                        <TextBlock Text="Ordenação padrão" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
+                        <TextBlock Text="{x:Static res:Strings.SortOrder}" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
                         <ComboBox ItemsSource="{Binding SortOrderOptions}"
                                   SelectedIndex="{Binding SortOrderIndex}"
                                   HorizontalAlignment="Stretch" />
@@ -86,25 +87,25 @@
 
             <!-- Dados / Armazenamento -->
             <StackPanel Spacing="4">
-                <TextBlock Text="Dados / Armazenamento" FontSize="20" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" />
-                <TextBlock Text="Localização dos arquivos e limpeza de cache." FontSize="12" Foreground="{DynamicResource TextMutedBrush}" />
+                <TextBlock Text="{x:Static res:Strings.StorageSection}" FontSize="20" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" />
+                <TextBlock Text="{x:Static res:Strings.StorageSectionSubtitle}" FontSize="12" Foreground="{DynamicResource TextMutedBrush}" />
             </StackPanel>
 
             <Border Classes="settingscard">
                 <StackPanel Spacing="18">
 
                     <StackPanel Spacing="8">
-                        <TextBlock Text="Pasta da biblioteca" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
+                        <TextBlock Text="{x:Static res:Strings.LibraryFolder}" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
                         <TextBox Text="{Binding DataDirectory}" IsReadOnly="True" />
-                        <Button x:Name="BrowseFolderButton" Content="Escolher nova pasta..."
+                        <Button x:Name="BrowseFolderButton" Content="{x:Static res:Strings.BrowseFolder}"
                                 HorizontalAlignment="Left" />
-                        <TextBlock Text="Os dados serão copiados para a nova pasta e aplicados após reiniciar o aplicativo."
+                        <TextBlock Text="{x:Static res:Strings.MoveDataHint}"
                                    FontSize="12" Foreground="{DynamicResource TextMutedBrush}" TextWrapping="Wrap" />
                     </StackPanel>
 
                     <StackPanel Spacing="8">
-                        <TextBlock Text="Cache" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
-                        <Button Content="Limpar cache de páginas" Command="{Binding ClearCacheCommand}"
+                        <TextBlock Text="{x:Static res:Strings.Cache}" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
+                        <Button Content="{x:Static res:Strings.ClearPageCache}" Command="{Binding ClearCacheCommand}"
                                 HorizontalAlignment="Left" />
                     </StackPanel>
 
@@ -116,22 +117,22 @@
 
             <!-- Geral -->
             <StackPanel Spacing="4">
-                <TextBlock Text="Geral" FontSize="20" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" />
-                <TextBlock Text="Idioma e comportamento de salvamento." FontSize="12" Foreground="{DynamicResource TextMutedBrush}" />
+                <TextBlock Text="{x:Static res:Strings.GeneralSection}" FontSize="20" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" />
+                <TextBlock Text="{x:Static res:Strings.GeneralSectionSubtitle}" FontSize="12" Foreground="{DynamicResource TextMutedBrush}" />
             </StackPanel>
 
             <Border Classes="settingscard">
                 <StackPanel Spacing="18">
 
                     <StackPanel Spacing="8">
-                        <TextBlock Text="Idioma" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
+                        <TextBlock Text="{x:Static res:Strings.Language}" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
                         <ComboBox ItemsSource="{Binding LanguageOptions}"
                                   SelectedIndex="{Binding LanguageIndex}"
                                   HorizontalAlignment="Stretch" />
                     </StackPanel>
 
                     <StackPanel Spacing="8">
-                        <TextBlock Text="Salvar progresso" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
+                        <TextBlock Text="{x:Static res:Strings.SaveProgress}" FontSize="13" Foreground="{DynamicResource TextPrimaryBrush}" />
                         <ComboBox ItemsSource="{Binding ProgressSaveIntervalOptions}"
                                   SelectedIndex="{Binding ProgressSaveIntervalIndex}"
                                   HorizontalAlignment="Stretch" />

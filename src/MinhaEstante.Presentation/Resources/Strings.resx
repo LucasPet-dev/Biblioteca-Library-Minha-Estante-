@@ -49,4 +49,200 @@
   <data name="SectionAbout" xml:space="preserve">
     <value>Sobre</value>
   </data>
+
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Importar</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Título</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="Genre" xml:space="preserve">
+    <value>Gênero</value>
+  </data>
+
+  <data name="ReaderSection" xml:space="preserve">
+    <value>Leitor</value>
+  </data>
+  <data name="ReaderSectionSubtitle" xml:space="preserve">
+    <value>Preferências de exibição ao abrir um livro.</value>
+  </data>
+  <data name="DefaultZoom" xml:space="preserve">
+    <value>Zoom padrão</value>
+  </data>
+  <data name="FitMode" xml:space="preserve">
+    <value>Modo de exibição</value>
+  </data>
+  <data name="AppearanceSection" xml:space="preserve">
+    <value>Aparência</value>
+  </data>
+  <data name="AppearanceSectionSubtitle" xml:space="preserve">
+    <value>Tema e tamanho das capas.</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Escuro</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Claro</value>
+  </data>
+  <data name="CoverSize" xml:space="preserve">
+    <value>Tamanho das capas</value>
+  </data>
+  <data name="LibrarySortSubtitle" xml:space="preserve">
+    <value>Ordenação dos itens da biblioteca.</value>
+  </data>
+  <data name="SortOrder" xml:space="preserve">
+    <value>Ordenação padrão</value>
+  </data>
+  <data name="StorageSection" xml:space="preserve">
+    <value>Dados / Armazenamento</value>
+  </data>
+  <data name="StorageSectionSubtitle" xml:space="preserve">
+    <value>Localização dos arquivos e limpeza de cache.</value>
+  </data>
+  <data name="LibraryFolder" xml:space="preserve">
+    <value>Pasta da biblioteca</value>
+  </data>
+  <data name="BrowseFolder" xml:space="preserve">
+    <value>Escolher nova pasta...</value>
+  </data>
+  <data name="ChooseLibraryFolder" xml:space="preserve">
+    <value>Escolher nova pasta da biblioteca</value>
+  </data>
+  <data name="MoveDataHint" xml:space="preserve">
+    <value>Os dados serão copiados para a nova pasta e aplicados após reiniciar o aplicativo.</value>
+  </data>
+  <data name="Cache" xml:space="preserve">
+    <value>Cache</value>
+  </data>
+  <data name="ClearPageCache" xml:space="preserve">
+    <value>Limpar cache de páginas</value>
+  </data>
+  <data name="GeneralSection" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="GeneralSectionSubtitle" xml:space="preserve">
+    <value>Idioma e comportamento de salvamento.</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="SaveProgress" xml:space="preserve">
+    <value>Salvar progresso</value>
+  </data>
+
+  <data name="FitToPage" xml:space="preserve">
+    <value>Ajustar à página</value>
+  </data>
+  <data name="FitToWidth" xml:space="preserve">
+    <value>Ajustar à largura</value>
+  </data>
+  <data name="FullHeight" xml:space="preserve">
+    <value>Altura total</value>
+  </data>
+  <data name="CoverSmall" xml:space="preserve">
+    <value>Pequena</value>
+  </data>
+  <data name="CoverMedium" xml:space="preserve">
+    <value>Média</value>
+  </data>
+  <data name="CoverLarge" xml:space="preserve">
+    <value>Grande</value>
+  </data>
+  <data name="SortByTitle" xml:space="preserve">
+    <value>Título</value>
+  </data>
+  <data name="SortByAuthor" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="SortByDateAdded" xml:space="preserve">
+    <value>Data adicionado</value>
+  </data>
+  <data name="SortByLastAccessed" xml:space="preserve">
+    <value>Último acessado</value>
+  </data>
+  <data name="EveryChange" xml:space="preserve">
+    <value>A cada mudança</value>
+  </data>
+  <data name="Every5Seconds" xml:space="preserve">
+    <value>5 segundos</value>
+  </data>
+  <data name="Every10Seconds" xml:space="preserve">
+    <value>10 segundos</value>
+  </data>
+  <data name="Every30Seconds" xml:space="preserve">
+    <value>30 segundos</value>
+  </data>
+
+  <data name="LanguageAppliedOnRestart" xml:space="preserve">
+    <value>O idioma será aplicado ao reiniciar o aplicativo.</value>
+  </data>
+  <data name="DataMovedRestart" xml:space="preserve">
+    <value>Dados copiados. Reinicie o aplicativo para usar a nova pasta.</value>
+  </data>
+  <data name="ErrorMoving" xml:space="preserve">
+    <value>Erro ao mover: {0}</value>
+  </data>
+  <data name="CacheCleared" xml:space="preserve">
+    <value>Cache de páginas limpo.</value>
+  </data>
+
+  <data name="SelectPdfOrCbz" xml:space="preserve">
+    <value>Selecione um arquivo PDF ou CBZ.</value>
+  </data>
+  <data name="Importing" xml:space="preserve">
+    <value>Importando...</value>
+  </data>
+  <data name="ImportedSuccessfully" xml:space="preserve">
+    <value>'{0}' importado com sucesso.</value>
+  </data>
+  <data name="ImportError" xml:space="preserve">
+    <value>Erro ao importar: {0}</value>
+  </data>
+  <data name="ImportSubtitle" xml:space="preserve">
+    <value>Selecione um arquivo PDF ou CBZ para adicionar à sua estante.</value>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Selecionar arquivo...</value>
+  </data>
+  <data name="NoFileSelected" xml:space="preserve">
+    <value>Nenhum arquivo selecionado</value>
+  </data>
+  <data name="SelectBook" xml:space="preserve">
+    <value>Selecionar livro</value>
+  </data>
+  <data name="DigitalBooks" xml:space="preserve">
+    <value>Livros digitais</value>
+  </data>
+
+  <data name="EditInfo" xml:space="preserve">
+    <value>Editar informações</value>
+  </data>
+  <data name="AboutDescription" xml:space="preserve">
+    <value>Leitor e organizador de biblioteca digital (PDF e CBZ).</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versão</value>
+  </data>
+
+  <data name="RemoveBookTitle" xml:space="preserve">
+    <value>Remover livro</value>
+  </data>
+  <data name="RemoveBookQuestion" xml:space="preserve">
+    <value>Remover "{0}" da biblioteca?</value>
+  </data>
+  <data name="DeleteFileAlso" xml:space="preserve">
+    <value>Apagar o arquivo do disco também</value>
+  </data>
 </root>

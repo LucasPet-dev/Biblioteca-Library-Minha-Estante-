@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using MinhaEstante.Application.Interfaces;
 using MinhaEstante.Presentation.Messages;
+using MinhaEstante.Presentation.Resources;
 
 namespace MinhaEstante.Presentation.ViewModels;
 
@@ -31,24 +32,24 @@ public partial class ImportViewModel : ViewModelBase
     {
         if (string.IsNullOrWhiteSpace(SourcePath))
         {
-            Status = "Selecione um arquivo PDF ou CBZ.";
+            Status = Strings.SelectPdfOrCbz;
             return;
         }
 
         IsImporting = true;
-        Status = "Importando...";
+        Status = Strings.Importing;
 
         try
         {
             var book = await _importBook.ExecuteAsync(SourcePath);
-            Status = $"'{book.Title}' importado com sucesso.";
+            Status = string.Format(Strings.ImportedSuccessfully, book.Title);
 
             WeakReferenceMessenger.Default.Send(new LibraryChangedMessage());
             WeakReferenceMessenger.Default.Send(new NavigateHomeMessage());
         }
         catch (Exception ex)
         {
-            Status = $"Erro ao importar: {ex.Message}";
+            Status = string.Format(Strings.ImportError, ex.Message);
         }
         finally
         {

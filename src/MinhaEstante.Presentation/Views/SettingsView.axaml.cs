@@ -1,6 +1,7 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Platform.Storage;
+using MinhaEstante.Presentation.Resources;
 using MinhaEstante.Presentation.ViewModels;
 
 namespace MinhaEstante.Presentation.Views;
@@ -24,7 +25,7 @@ public partial class SettingsView : UserControl
 
         var folders = await topLevel.StorageProvider.OpenFolderPickerAsync(new FolderPickerOpenOptions
         {
-            Title = "Escolher nova pasta da biblioteca",
+            Title = Strings.ChooseLibraryFolder,
             AllowMultiple = false,
         });
 

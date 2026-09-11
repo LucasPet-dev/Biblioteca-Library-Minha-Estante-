@@ -1,7 +1,8 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:res="using:MinhaEstante.Presentation.Resources"
         x:Class="MinhaEstante.Presentation.Views.Dialogs.ConfirmRemoveDialog"
-        Title="Remover livro"
+        Title="{x:Static res:Strings.RemoveBookTitle}"
         Width="420" SizeToContent="Height"
         WindowStartupLocation="CenterOwner"
         Background="#1E1E1E"
@@ -10,10 +11,10 @@
     <StackPanel Margin="20" Spacing="12">
         <TextBlock x:Name="QuestionText" Foreground="White" TextWrapping="Wrap" />
         <CheckBox x:Name="DeleteFileCheck" Foreground="White"
-                  Content="Apagar o arquivo do disco também" />
+                  Content="{x:Static res:Strings.DeleteFileAlso}" />
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="8">
-            <Button Content="Cancelar" Click="OnCancel" />
-            <Button Content="Remover" Click="OnConfirm" />
+            <Button Content="{x:Static res:Strings.Cancel}" Click="OnCancel" />
+            <Button Content="{x:Static res:Strings.Remove}" Click="OnConfirm" />
         </StackPanel>
     </StackPanel>
 </Window>

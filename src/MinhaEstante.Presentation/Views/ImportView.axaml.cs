@@ -1,6 +1,7 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Platform.Storage;
+using MinhaEstante.Presentation.Resources;
 using MinhaEstante.Presentation.ViewModels;
 
 namespace MinhaEstante.Presentation.Views;
@@ -24,11 +25,11 @@ public partial class ImportView : UserControl
 
         var files = await topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
         {
-            Title = "Selecionar livro",
+            Title = Strings.SelectBook,
             AllowMultiple = false,
             FileTypeFilter = new[]
             {
-                new FilePickerFileType("Livros digitais") { Patterns = new[] { "*.pdf", "*.cbz" } },
+                new FilePickerFileType(Strings.DigitalBooks) { Patterns = new[] { "*.pdf", "*.cbz" } },
             },
         });
 

@@ -5,6 +5,7 @@ using MinhaEstante.Application.Interfaces;
 using MinhaEstante.Domain.Entities;
 using MinhaEstante.Domain.Enums;
 using MinhaEstante.Presentation.Messages;
+using MinhaEstante.Presentation.Resources;
 using MinhaEstante.Presentation.Services;
 
 namespace MinhaEstante.Presentation.ViewModels;
@@ -21,24 +22,24 @@ public partial class SettingsViewModel : ViewModelBase
 
     public IReadOnlyList<string> FitModeOptions { get; } =
     [
-        "Ajustar à página",
-        "Ajustar à largura",
-        "Altura total",
+        Strings.FitToPage,
+        Strings.FitToWidth,
+        Strings.FullHeight,
     ];
 
     public IReadOnlyList<string> CoverSizeOptions { get; } =
     [
-        "Pequena",
-        "Média",
-        "Grande",
+        Strings.CoverSmall,
+        Strings.CoverMedium,
+        Strings.CoverLarge,
     ];
 
     public IReadOnlyList<string> SortOrderOptions { get; } =
     [
-        "Título",
-        "Autor",
-        "Data adicionado",
-        "Último acessado",
+        Strings.SortByTitle,
+        Strings.SortByAuthor,
+        Strings.SortByDateAdded,
+        Strings.SortByLastAccessed,
     ];
 
     private static readonly int[] _progressSaveIntervals = [0, 5, 10, 30];
@@ -51,10 +52,10 @@ public partial class SettingsViewModel : ViewModelBase
 
     public IReadOnlyList<string> ProgressSaveIntervalOptions { get; } =
     [
-        "A cada mudança",
-        "5 segundos",
-        "10 segundos",
-        "30 segundos",
+        Strings.EveryChange,
+        Strings.Every5Seconds,
+        Strings.Every10Seconds,
+        Strings.Every30Seconds,
     ];
 
     [ObservableProperty]
@@ -137,7 +138,7 @@ public partial class SettingsViewModel : ViewModelBase
         _ = SaveAsync();
         if (!_loading)
         {
-            StorageStatus = "O idioma será aplicado ao reiniciar o aplicativo.";
+            StorageStatus = Strings.LanguageAppliedOnRestart;
         }
     }
 
@@ -169,11 +170,11 @@ public partial class SettingsViewModel : ViewModelBase
         try
         {
             await _dataDirectoryManager.MoveAsync(newDirectory);
-            StorageStatus = "Dados copiados. Reinicie o aplicativo para usar a nova pasta.";
+            StorageStatus = Strings.DataMovedRestart;
         }
         catch (Exception ex)
         {
-            StorageStatus = $"Erro ao mover: {ex.Message}";
+            StorageStatus = string.Format(Strings.ErrorMoving, ex.Message);
         }
     }
 
@@ -181,7 +182,7 @@ public partial class SettingsViewModel : ViewModelBase
     private void ClearCache()
     {
         WeakReferenceMessenger.Default.Send(new ClearReaderCacheMessage());
-        StorageStatus = "Cache de páginas limpo.";
+        StorageStatus = Strings.CacheCleared;
     }
 
     private async Task SaveAsync()

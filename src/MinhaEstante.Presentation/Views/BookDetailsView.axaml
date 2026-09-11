@@ -1,6 +1,7 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:MinhaEstante.Presentation.ViewModels"
+             xmlns:res="using:MinhaEstante.Presentation.Resources"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="560" d:DesignHeight="360"
@@ -10,20 +11,20 @@
     <ScrollViewer>
         <StackPanel Spacing="12" MaxWidth="520" Margin="24" HorizontalAlignment="Center">
 
-            <TextBlock Text="Editar informações" FontSize="24" FontWeight="SemiBold" />
+            <TextBlock Text="{x:Static res:Strings.EditInfo}" FontSize="24" FontWeight="SemiBold" />
 
-            <TextBlock Text="Título" />
+            <TextBlock Text="{x:Static res:Strings.Title}" />
             <TextBox Text="{Binding Title}" />
 
-            <TextBlock Text="Autor" />
+            <TextBlock Text="{x:Static res:Strings.Author}" />
             <TextBox Text="{Binding Author}" />
 
-            <TextBlock Text="Gênero" />
+            <TextBlock Text="{x:Static res:Strings.Genre}" />
             <TextBox Text="{Binding Genre}" />
 
             <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right">
-                <Button Content="Cancelar" Command="{Binding CancelCommand}" />
-                <Button Content="Salvar" Command="{Binding SaveCommand}" />
+                <Button Content="{x:Static res:Strings.Cancel}" Command="{Binding CancelCommand}" />
+                <Button Content="{x:Static res:Strings.Save}" Command="{Binding SaveCommand}" />
             </StackPanel>
 
         </StackPanel>
