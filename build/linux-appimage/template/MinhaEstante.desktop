@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=MinhaEstante
+Exec=MinhaEstante.Presentation
+Icon=minhaestante
+Categories=Utility;
+Terminal=false

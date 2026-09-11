@@ -1,0 +1,37 @@
+# ===== .NET build results =====
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+publish/
+
+# ===== Visual Studio =====
+.vs/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# ===== NuGet cache / restore =====
+project.assets.json
+*.nuget.g.props
+*.nuget.g.targets
+
+# ===== Build artifacts (não versionar instaladores/binários) =====
+*.exe
+*.dll
+*.pdb
+*.AppImage
+*.tar.gz
+*.dmg
+*.deb
+*.rpm
+
+build/windows-installer/publish/
+build/windows-installer/Output/
+build/windows-installer/dist/
+build/linux-appimage/publish/
+build/linux-appimage/MinhaEstante.AppDir/
+build/linux-appimage/tools/

@@ -1,0 +1,63 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:MinhaEstante.Presentation.ViewModels"
+        xmlns:res="using:MinhaEstante.Presentation.Resources"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="760"
+        x:Class="MinhaEstante.Presentation.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="{x:Static res:Strings.LibraryTitle}"
+        Width="1200" Height="760"
+        MinWidth="720" MinHeight="460"
+        Background="{DynamicResource AppBackgroundGradient}">
+
+    <Grid ColumnDefinitions="220,*">
+
+        <!-- Sidebar -->
+        <Border Grid.Column="0" Background="{DynamicResource SidebarBrush}"
+                BorderBrush="{DynamicResource SidebarBorderBrush}" BorderThickness="0,0,1,0">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="{x:Static res:Strings.LibraryTitle}"
+                           FontSize="20" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}"
+                           Margin="20,24,20,20" />
+
+                <ItemsControl ItemsSource="{Binding NavItems}" Margin="0,4,0,0">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Classes="nav" Classes.active="{Binding IsActive}"
+                                    Command="{Binding SelectCommand}">
+                                <StackPanel Orientation="Horizontal" Spacing="12">
+                                    <TextBlock Text="{Binding Glyph}" FontSize="16" VerticalAlignment="Center" />
+                                    <TextBlock Text="{Binding Label}" FontSize="14" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </DockPanel>
+        </Border>
+
+        <!-- Conteúdo -->
+        <Grid Grid.Column="1" RowDefinitions="Auto,*" Background="{DynamicResource AppBackgroundGradient}">
+
+            <!-- Barra superior -->
+            <Border Grid.Row="0" Padding="28,20" Background="Transparent"
+                    BorderBrush="{DynamicResource SidebarBorderBrush}" BorderThickness="0,0,0,1">
+                <DockPanel>
+                    <Button DockPanel.Dock="Right" Classes="primary"
+                            Content="{x:Static res:Strings.ImportBook}"
+                            Command="{Binding ImportCommand}"
+                            IsVisible="{Binding IsLibraryActive}" />
+                    <TextBlock Text="{Binding SelectedItem.Label}"
+                               FontSize="22" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"
+                               VerticalAlignment="Center" />
+                </DockPanel>
+            </Border>
+
+            <!-- Área da tela atual -->
+            <ContentControl Grid.Row="1" Content="{Binding CurrentPage}" />
+
+        </Grid>
+    </Grid>
+</Window>

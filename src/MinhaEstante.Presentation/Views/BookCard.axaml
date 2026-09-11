@@ -1,0 +1,45 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:MinhaEstante.Presentation.ViewModels"
+             xmlns:res="using:MinhaEstante.Presentation.Resources"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="200"
+             x:Class="MinhaEstante.Presentation.Views.BookCard"
+             x:DataType="vm:BookCardViewModel">
+
+    <Border Classes="librarycard" Width="{DynamicResource BookCardWidth}" Margin="8" Padding="10">
+        <StackPanel Spacing="10">
+            <Border CornerRadius="8" Height="{DynamicResource CoverHeight}" Background="{DynamicResource CardCoverBrush}" ClipToBounds="True">
+                <Image Source="{Binding Cover}" Stretch="Uniform" />
+            </Border>
+
+            <StackPanel Spacing="4">
+                <TextBlock Text="{Binding Title}" FontSize="14" FontWeight="SemiBold"
+                           Foreground="{DynamicResource TextPrimaryBrush}" TextTrimming="CharacterEllipsis" />
+                <TextBlock Text="{Binding Author}" FontSize="11" Foreground="{DynamicResource TextMutedBrush}"
+                           TextTrimming="CharacterEllipsis" />
+                <TextBlock Text="{Binding Genre}" FontSize="11" Foreground="{DynamicResource TextMutedBrush}"
+                           TextTrimming="CharacterEllipsis" />
+                <TextBlock Text="{Binding ProgressLabel}" FontSize="11" Foreground="{DynamicResource TextMutedBrush}" />
+            </StackPanel>
+
+            <ProgressBar Minimum="0" Maximum="100" Value="{Binding ProgressPercent}"
+                         Height="6" Background="{DynamicResource ProgressTrackBrush}" Foreground="{StaticResource ProgressGradient}"
+                         CornerRadius="3" />
+
+            <Button Classes="card" Content="{x:Static res:Strings.Open}"
+                    Command="{Binding OpenCommand}"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" />
+
+            <Grid ColumnDefinitions="*,*">
+                <Button Grid.Column="0" Classes="card" Content="{x:Static res:Strings.Edit}"
+                        Command="{Binding EditCommand}"
+                        HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="0,0,4,0" />
+                <Button Grid.Column="1" Classes="card" Content="{x:Static res:Strings.Remove}"
+                        Command="{Binding RemoveCommand}"
+                        HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="4,0,0,0" />
+            </Grid>
+        </StackPanel>
+    </Border>
+</UserControl>

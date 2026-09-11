@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:MinhaEstante.Presentation.ViewModels"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="560" d:DesignHeight="360"
+             x:Class="MinhaEstante.Presentation.Views.BookDetailsView"
+             x:DataType="vm:BookDetailsViewModel">
+
+    <ScrollViewer>
+        <StackPanel Spacing="12" MaxWidth="520" Margin="24" HorizontalAlignment="Center">
+
+            <TextBlock Text="Editar informações" FontSize="24" FontWeight="SemiBold" />
+
+            <TextBlock Text="Título" />
+            <TextBox Text="{Binding Title}" />
+
+            <TextBlock Text="Autor" />
+            <TextBox Text="{Binding Author}" />
+
+            <TextBlock Text="Gênero" />
+            <TextBox Text="{Binding Genre}" />
+
+            <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right">
+                <Button Content="Cancelar" Command="{Binding CancelCommand}" />
+                <Button Content="Salvar" Command="{Binding SaveCommand}" />
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

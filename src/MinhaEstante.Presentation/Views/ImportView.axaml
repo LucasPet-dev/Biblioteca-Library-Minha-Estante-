@@ -1,0 +1,33 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:MinhaEstante.Presentation.ViewModels"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="560" d:DesignHeight="360"
+             x:Class="MinhaEstante.Presentation.Views.ImportView"
+             x:DataType="vm:ImportViewModel">
+
+    <ScrollViewer>
+        <StackPanel Spacing="12" MaxWidth="520" Margin="24" HorizontalAlignment="Center">
+
+            <TextBlock Text="Importar livro" FontSize="24" FontWeight="SemiBold" />
+
+            <TextBlock Text="Selecione um arquivo PDF ou CBZ para adicionar à sua estante."
+                       Opacity="0.7" TextWrapping="Wrap" />
+
+            <Button x:Name="BrowseButton" Content="Selecionar arquivo..." HorizontalAlignment="Stretch" />
+
+            <TextBox Text="{Binding SourcePath}" IsReadOnly="True" Watermark="Nenhum arquivo selecionado" />
+
+            <TextBlock Text="{Binding Status}" TextWrapping="Wrap" />
+
+            <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right">
+                <Button Content="Cancelar" Command="{Binding CancelCommand}" />
+                <Button Content="Importar"
+                        Command="{Binding ImportCommand}"
+                        IsEnabled="{Binding !IsImporting}" />
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

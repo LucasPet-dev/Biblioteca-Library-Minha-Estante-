@@ -1,0 +1,70 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!-- Item de navegação da sidebar -->
+  <Style Selector="Button.nav">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Foreground" Value="{DynamicResource TextMutedBrush}" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="HorizontalContentAlignment" Value="Left" />
+    <Setter Property="CornerRadius" Value="10" />
+    <Setter Property="Padding" Value="14,10" />
+    <Setter Property="Margin" Value="12,3" />
+    <Setter Property="BorderThickness" Value="0" />
+  </Style>
+  <Style Selector="Button.nav:pointerover">
+    <Setter Property="Background" Value="{DynamicResource NavHoverBrush}" />
+  </Style>
+  <Style Selector="Button.nav.active">
+    <Setter Property="Background" Value="#264FC3F7" />
+    <Setter Property="Foreground" Value="{StaticResource PrimaryBrush}" />
+  </Style>
+
+  <!-- Botão primário (ex.: Importar livro) -->
+  <Style Selector="Button.primary">
+    <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
+    <Setter Property="Foreground" Value="#0A0E27" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="CornerRadius" Value="10" />
+    <Setter Property="Padding" Value="16,9" />
+    <Setter Property="BorderThickness" Value="0" />
+  </Style>
+  <Style Selector="Button.primary:pointerover">
+    <Setter Property="Background" Value="#6BD0FF" />
+  </Style>
+  <Style Selector="Button.primary:pressed">
+    <Setter Property="Background" Value="#38B6ED" />
+  </Style>
+
+  <!-- Botões dos cards -->
+  <Style Selector="Button.card">
+    <Setter Property="Background" Value="{DynamicResource ButtonCardBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+    <Setter Property="CornerRadius" Value="8" />
+    <Setter Property="BorderThickness" Value="0" />
+  </Style>
+  <Style Selector="Button.card:pointerover">
+    <Setter Property="Background" Value="{DynamicResource ButtonCardHoverBrush}" />
+  </Style>
+  <Style Selector="Button.card:pressed">
+    <Setter Property="Background" Value="{DynamicResource ButtonCardPressedBrush}" />
+  </Style>
+
+  <!-- Card de configurações -->
+  <Style Selector="Border.settingscard">
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource CardBorderBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="16" />
+    <Setter Property="Padding" Value="24" />
+  </Style>
+
+  <!-- Card da estante -->
+  <Style Selector="Border.librarycard">
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource CardBorderBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="16" />
+  </Style>
+
+</Styles>

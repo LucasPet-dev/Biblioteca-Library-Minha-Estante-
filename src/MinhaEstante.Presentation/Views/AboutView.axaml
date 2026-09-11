@@ -1,0 +1,13 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:MinhaEstante.Presentation.ViewModels"
+             x:Class="MinhaEstante.Presentation.Views.AboutView"
+             x:DataType="vm:AboutViewModel">
+
+    <StackPanel Margin="32" Spacing="8">
+        <TextBlock Text="{Binding AppName}" FontSize="26" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" />
+        <TextBlock Text="{Binding Version, StringFormat='Versão {0}'}" Foreground="{DynamicResource TextMutedBrush}" />
+        <TextBlock Text="Leitor e organizador de biblioteca digital (PDF e CBZ)."
+                   Foreground="{DynamicResource TextMutedBrush}" Margin="0,12,0,0" TextWrapping="Wrap" />
+    </StackPanel>
+</UserControl>
