@@ -23,11 +23,13 @@
         </Border>
 
         <ScrollViewer x:Name="Scroller"
-                      HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled"
+                      HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
                       Focusable="True">
-            <Image Source="{Binding CurrentImage}"
-                   Width="{Binding ImageWidth}" Height="{Binding ImageHeight}"
-                   Stretch="Fill" />
+            <Border Padding="32">
+                <Image Source="{Binding CurrentImage}"
+                       Width="{Binding ImageWidth}" Height="{Binding ImageHeight}"
+                       Stretch="Fill" />
+            </Border>
         </ScrollViewer>
     </DockPanel>
 </UserControl>
