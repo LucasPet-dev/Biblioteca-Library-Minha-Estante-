@@ -17,6 +17,13 @@ Minha Estante is a cross-platform desktop application for organizing and reading
 
 This project was built to explore clean, maintainable desktop application architecture in .NET while solving a real personal need: a single, lightweight place to keep and read PDFs, manga, and comic files without depending on cloud services or heavy third-party readers.
 
+### Interface
+
+<p align="center">
+  <img src="ImagemBook.jpeg" alt="Bookshelf interface - Minha Estante" width="49%">
+  <img src="ImagemBook2.jpeg" alt="Reader interface - Minha Estante" width="49%">
+</p>
+
 ### Features
 
 - Import and organize PDF and CBZ files in a visual library grid
@@ -77,6 +84,13 @@ Minha Estante é uma aplicação desktop multiplataforma para organizar e ler li
 ### Finalidade
 
 Este projeto foi construído para explorar uma arquitetura de aplicação desktop limpa e sustentável em .NET, ao mesmo tempo resolvendo uma necessidade pessoal real: um lugar único e leve para guardar e ler PDFs, mangás e HQs, sem depender de serviços em nuvem ou leitores pesados de terceiros.
+
+### Interface
+
+<p align="center">
+  <img src="ImagemBook.jpeg" alt="Interface da estante - Minha Estante" width="49%">
+  <img src="ImagemBook2.jpeg" alt="Interface do leitor - Minha Estante" width="49%">
+</p>
 
 ### Funcionalidades
 
